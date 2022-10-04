@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WDCreation.co.in</title>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+     <link rel="stylesheet" type="text/css" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="https://kit.fontawesome.com/e25b852c87.js" crossorigin="anonymous"></script>
+  </head>
+<body>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
+<!--script for contact form-->
+
+<script>
+$(function()
+{
+    function after_form_submitted(data)
+    {
+        if(data.result == 'success')
+        {
+            $('form#reused_form').hide();
+            $('#success_message').show();
+            $('#error_message').hide();
+        }
+        else
+        {
+            $('#error_message').append('<ul></ul>');
+
+            jQuery.each(data.errors,function(key,val)
+            {
+                $('#error_message ul').append('<li>'+key+':'+val+'</li>');
+            });
+            $('#success_message').hide();
+            $('#error_message').show();
+
+            //reverse the response on the button
+            $('button[type="button"]', $form).each(function()
+            {
+                $btn = $(this);
+                label = $btn.prop('orig_label');
+                if(label)
+                {
+                    $btn.prop('type','submit' );
+                    $btn.text(label);
+                    $btn.prop('orig_label','');
+                }
+            });
+
+        }//else
+    }
+
+  $('#reused_form').submit(function(e)
+      {
+        e.preventDefault();
+
+        $form = $(this);
+        //show some response on the button
+        $('button[type="submit"]', $form).each(function()
+        {
+            $btn = $(this);
+            $btn.prop('type','button' );
+            $btn.prop('orig_label',$btn.text());
+            $btn.text('Sending ...');
+        });
+
+
+                    $.ajax({
+                type: "POST",
+                url: 'handler.php',
+                data: $form.serialize(),
+                success: after_form_submitted,
+                dataType: 'json'
+            });
+
+      });
+});
+</script>
+
+<!-- Top Navigation Menu -->
+<div class="topnav">
+  <a class="active" href="#home"><i class="fa fa-home">Home</i></a>
+  <div id="myLinks">
+  <a href="#about"><i class="fa fa-user"></i>About</a> 
+  <a href="#service"><i class="fa fa-code-fork">Service</i></a>
+  <a href="#contact"><i class="fa fa-meetup">Contact</i></a>  
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<!-- End smartphone / tablet look -->
+   
+<!--home start here-->
+<section id="home" class="home">
+<section class="background firstsection">
+  <div class="box-main">
+
+    <div class="firsthalf">
+       <p class="text-big">Innovation And Creation</p>
+       <p class="text-small">Your Imagination Become's True Here</p>
+    </div>
+ 
+    <div class="secondhalf">
+      <img src="./webimage/logo4.png" alt="image">
+    </div>
+  </div>
+
+<section class="text">
+      <p class="paras"><blockquote>As our experience and technology partner, WDCreation builds website design and logo design. We understand our clients and customers needs and their demands, We are here for your business by our creative skills and your higher brand value. Our design are based on day to day topic and daily updates. Give us a chance to design your website by our skills and technic in unique way.As we say about design like that our logos are simple and attractive by in their own way. Logos are based on as per your need/company need, Our ideas are waiting for your choice.</blockquote></p>   
+    <div class="thumbnail"> 
+     <img src="https://source.unsplash.com/150x150/?laptop" alt="image">
+   </div>
+</section>
+<br><br>
+<section class="text-2">
+      <p class="paras"><blockquote>Why to choose WDCreation for your website design and logo design services?
+      Each one of our customer is important and deserves an excellent that truely represent your brand. We maintain our quality and complete project on time.</blockquote></p>   
+    <div class="thumbnail"> 
+     <img src="https://source.unsplash.com/150x150/?website,computer-logo" alt="image">
+   </div>
+</section>
+<br><br>
+</section>
+</section>
+<!--home page end-->
+  
+<!--about start here-->
+<hr>
+<section class="about" id="about">
+  
+      <div class="written"><p><blockquote>Our employees are fully skilled by various language, technic and front-end Architecture. Your data will be secure by server and will not have any future problems.We will research about your given topic and will try to make it better than your imagination and thinking.</blockquote></p></div>   
+<hr>
+ <div class="card">
+  <img src="./webimage/omkar.jpg" alt="member" style="width:100%">
+  <h1>Omkar Raykar</h1>
+  <p class="title">Web-Designer</p>
+  <p>MIT, POLYTECHNIC</p>
+  <a href="mailto:raykaromkar1244@gmail.com ">raykaromkar1244@gmail.com </a>
+  <div style="margin: 24px 0;">
+    <a href="https://instagram.com/_omkar_raykar_?igshid=26whfw8gzgj2" target="_blank"><i class="fa fa-instagram"></i></a>  
+    <a href="https://bit.ly/3n4wsja" target="_blank"><i class="fa fa-whatsapp"></i></a>  
+    <a href="" target="_blank" ><i class="fa fa-facebook"></i></a> 
+  </div>
+  <p><button>Contact</button></p>
+</div>
+<br><br><br>
+
+    <div class="card">
+      <img src="./webimage/gopu.jpg" alt="member" style="width: 100%">
+        <h1>Kishan Gopale</h1>
+        <p class="title">Art Director</p>
+        <p>DY Patil, College</p>
+        <a href="mailto:kishangopale09@gmail.com ">kishangopale09@gmail.com </a>
+         <div style="margin: 24px 0;">
+    <a href="https://instagram.com/_kishan_0990_?igshid=1n3jxdq8g2w7o" target="_blank"><i class="fa fa-instagram"></i></a>  
+    <a href="https://bit.ly/3rLB5CC" target="_blank"><i class="fa fa-whatsapp"></i></a>  
+    <a href=""target="_blank"><i class="fa fa-facebook"></i></a> 
+  </div>
+  <p><button>Contact</button></p>
+  </div>
+<br><br><br>  
+
+    <div class="card">
+      <img src="./webimage/sushil.jpg" alt="member" style="width: 100%;">
+        <h1>Sushil Pathare</h1>
+        <p class="title">Supporter</p>
+        <p>MIT, POLYTECHNIC</p>
+        <a href="mailto:sushil2003p@gmail.com ">sushil2003p@gmail.com</a>
+         <div style="margin: 24px 0;">
+    <a href="https://instagram.com/sushil_pathare_9448?igshid=11csb0y9hzge4" target="_blank"><i class="fa fa-instagram"></i></a>   
+    <a href="https://bit.ly/2KNEXC8" target="_blank"><i class="fa fa-whatsapp"></i></a>  
+    <a href="" target="_blank"><i class="fa fa-facebook"></i></a> 
+  </div>
+        <p><button>Contact</button></p>
+    </div>
+  </div>
+</div>
+<hr>
+</section>
+
+<!--sesrvice start here-->
+<section id="service" class="service">
+  <div class="all">
+  <div class="formatbig"><p>Check out the below pricing cards. We present work as your comfort zone any business means. Our service is made by analyzing customers budget and need.
+  </p></div>
+
+<div class="zmove">
+  <ul class="price">
+    <li class="header">Basic</li>
+    <li class="grey">$ 20.49 / year</li>
+    <li>Email support</li>
+    <li>Domain as per </li>
+    <li>Hosting chargers are not included</li>
+    
+  </ul>
+</div>
+
+<div class="zmove">
+  <ul class="price">
+    <li class="header" style="background-color:#4CAF50">Pro</li>
+    <li class="grey">$ 40.79 / year</li>
+    <li>Email support</li>
+    <li> 1 Domain (if require)</li>
+     <li>Hosting chargers are not included</li>
+   
+  </ul>
+</div>
+
+<div class="zmove">
+  <ul class="price">
+    <li class="header">Premium</li>
+    <li class="grey">$ 67.98 / year</li>
+    <li>Email support</li>
+    <li> Domain (included)</li>
+     <li>Hosting chargers are not included</li>
+   
+  </ul>
+</div>
+</div>
+</section>
+<br><br><br>
+<!--service end here-->
+
+<!--CONTACT START FROM HERE-->
+<section id="contact" class="contact"> 
+<form>
+       <form role="form" method="post" id="reused_form">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="E-mail">E-mail id</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="E-mail" name="E-maill" placeholder="Enter your E-mail..">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+ <div id="success_message" style="width:100%; height:100%; display:none; ">
+            <h3>Sent your message successfully!</h3>
+        </div>
+        <div id="error_message"
+                style="width:100%; height:100%; display:none; ">
+                    <h3>Error</h3>
+                    Sorry there was an error sending your form.
+
+        </div>
+</section>
+<br><br><br><br><br><br>
+<br><br><br>
+
+<footer style="text-align: center;
+  background-color:black;
+  color: white; 
+  height: 50px;
+  font-size: 18px; 
+  justify-content: center; 
+  width: 100%;">
+  &copy; 2021 copyright:wdcreation.co.in
+</footer>
+
+</body>
+</html>

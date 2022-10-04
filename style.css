@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Roboto+Slab&display=swap');
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a.icon {
+  float: right;
+}
+
+.topnav a:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.background{
+  background:rgba(0, 0, 0, 0.7) url('./webimage/img.3.jpg');
+  background-size: cover;
+  background-blend-mode: lighten;
+  height: 100%;
+  background-position: center;
+}
+
+
+
+.firstsection{
+  height: auto;
+}
+
+.box-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Titillium Web', sans-serif;
+  max-width: 50%;
+  margin: auto;
+  height: 50%;
+}
+
+.firsthalf{
+ width: 80%;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ padding-top: 80px;
+}
+
+.secondhalf{
+width: 30%;
+padding-top: 80px;
+}
+
+.secondhalf img{
+  width: 90%;
+  display: block;
+  margin: auto;
+}
+
+.text-big{
+ font-size: 32px;
+ margin: auto;
+}
+
+.text-small{
+font-size: 20px;
+margin:auto;
+}
+
+.paras{
+  padding: 0px 65px;
+}
+
+.text{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 80%;
+  margin: auto;
+  font-size: 16px;
+  font-family:'Titillium Web', sans-serif;  
+}
+
+.text-2{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 80%;
+  margin: auto;
+  font-size: 16px;
+   font-family:'Titillium Web', sans-serif;
+}
+
+.thumbnail img{
+border-radius: 50px;
+border: 2px solid black;
+}
+/*home end here*/
+
+/*about start here*/
+.about{
+  padding-top: 50px;
+   background:rgba(0, 0, 0, 0.7) url('./webimage/img.7.jpg');
+  background-size: cover;
+  height: 1000%;
+  background-position: center;
+}
+
+.written{
+  text-align: center;
+    font-size: 18px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+/*about end here*/
+
+/*service start here*/
+.service{
+  padding-top: 50px; 
+  height: 500px;
+}
+.formatbig{
+  text-align: center;
+    font-size: 18px;
+    font-family: 'Titillium Web', sans-serif;  
+}
+
+.zmove {
+    float: left;
+    width: 31.3%;
+    padding: 6px;
+}
+
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+} 
+/*service end here*/
+
+/*CONTACT START HERE*/
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.Contact{
+  
+  height: 500px;
+}
+
+.wip{
+    background-color:grey;
+    color:white;
+    border-radius:50px;
+    font-size:18px;
+}
+
+input[type=collect] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=collect]:hover {
+  background-color: #45a049;
+}
+/*contact end here*/
+
+
+/*responsive css written*/
+
+@media only screen and (max-width: 1100px) {
+  /*home responsive code*/
+  .firsthalf{
+    font-size: 8px;
+  }
+  .box-main{
+    flex-direction: column-reverse;
+    max-width: 100%;
+  }
+  .first-half{
+    padding-top: 0;
+  }
+  .second-half{
+    padding-top: 40px;
+    width: 40%;
+  }
+  
+  .text{
+    flex-direction: column-reverse;
+  }
+  .text-2{
+    flex-direction: column-reverse;
+  }
+  /*about responsive code*/
+  .column {
+    width: 100%;
+    display: block;
+  }
+
+  /*service responsive code*/
+  /*contact responsive code*/
+.col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
